@@ -5,13 +5,17 @@ import { FormsModule }  from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PinListComponent } from './pin-list/pin-list.component';
 import { EditPinComponent } from './edit-pin/edit-pin.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PinListComponent,
-    EditPinComponent
+    EditPinComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
