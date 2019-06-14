@@ -1,14 +1,14 @@
 <app-header></app-header>
 
 
-
-<app-edit-pin [childSelectedPin]="selectedPin" (clickedDone)="finishedEditing()">
-</app-edit-pin>
-<app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>
-
 <div class="container">
   <div class="hero-unit">
     <div>
+      <app-edit-pin [childSelectedPin]="selectedPin" (clickedDone)="finishedEditing()">
+      </app-edit-pin>
+      <app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>
+
+
       <h1>
         Hello, world!
       </h1>

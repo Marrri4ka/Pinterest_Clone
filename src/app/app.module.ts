@@ -7,6 +7,7 @@ import { PinListComponent } from './pin-list/pin-list.component';
 import { EditPinComponent } from './edit-pin/edit-pin.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { NewPinComponent } from './new-pin/new-pin.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     PinListComponent,
     EditPinComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NewPinComponent
   ],
   imports: [
     BrowserModule,
