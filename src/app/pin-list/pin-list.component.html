@@ -1,3 +1,6 @@
 <ul>
-  <li *ngFor="let currentPin of pins">{{currentPin.name}}</li>
+  <li *ngFor="let currentPin of pins">{{currentPin.name}}
+    <button (click)="editPin()">Edit!</button>
+  </li>
+
 </ul>
