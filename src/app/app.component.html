@@ -4,5 +4,9 @@
     Welcome to Pinterest!
 
   </h1>
-  <app-pin-list></app-pin-list>
+
 </div>
+
+<app-edit-pin [childSelectedPin]="selectedPin" (clickedDone)="finishedEditing()">
+</app-edit-pin>
+<app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>

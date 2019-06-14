@@ -1,0 +1,7 @@
+<div *ngIf="childSelectedPin">
+  <h3>{{childSelectedPin.name}}</h3>
+  <h4>Edit Pin</h4>
+  <label> Enter Pin's name</label>
+  <input [(ngModel)]="childSelectedPin.name">
+  <button (click)="finishedEditing()">Done</button>
+</div>
