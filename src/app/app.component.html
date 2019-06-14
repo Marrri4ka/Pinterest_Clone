@@ -7,6 +7,7 @@
       <app-edit-pin [childSelectedPin]="selectedPin" (clickedDone)="finishedEditing()">
       </app-edit-pin>
       <app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>
+      <app-new-pin (sendPin)="addPin($event)"></app-new-pin>
 
 
       <h1>

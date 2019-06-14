@@ -22,4 +22,8 @@ export class AppComponent {
   finishedEditing(){
     this.selectedPin = null;
   }
+
+  addPin(newPin: Pin){
+    this.masterPinList.push(newPin);
+  }
 }

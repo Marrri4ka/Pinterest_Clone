@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let currentPin of pins">{{currentPin.name}}
+  <li *ngFor="let currentPin of childPinList">{{currentPin.name}}
     <button (click)="editPin(currentPin)">Edit!</button>
   </li>
 

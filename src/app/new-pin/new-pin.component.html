@@ -1,3 +1,4 @@
-<p>
-  new-pin works!
-</p>
+<h1>New Pin</h1>
+<label>Create new Pin</label>
+<input #newName>
+<button (click)="submitForm(newName.value); newName.value='';">Add</button>
