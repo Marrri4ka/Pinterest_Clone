@@ -1,10 +1,11 @@
 <app-header></app-header>
 
-
-<app-edit-pin [childSelectedPin]="selectedPin" (clickedDone)="finishedEditing()">
-</app-edit-pin>
-<app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>
-<app-new-pin (sendPin)="addPin($event)"></app-new-pin>
+<div class="container" style="margin-top:100px;">
+  <app-edit-pin [childSelectedPin]="selectedPin" (clickedDone)="finishedEditing()">
+  </app-edit-pin>
+  <app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>
+  <app-new-pin (sendPin)="addPin($event)"></app-new-pin>
+</div>
 
 
 
