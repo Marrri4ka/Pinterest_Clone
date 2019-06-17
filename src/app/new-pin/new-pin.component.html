@@ -1,4 +1,10 @@
-<h1>New Pin</h1>
-<label>Create new Pin</label>
-<input #newName>
-<button (click)="submitForm(newName.value); newName.value='';">Add</button>
+<div ng-show="showme">
+  <h1>New Pin</h1>
+  <label>Create new Pin</label>
+  <input #newName>
+  <label>Category</label>
+  <input #newCategory>
+  <label>Date</label>
+  <input type="date" #newDate>
+  <button ng-click="showme=false" (click)="submitForm(newName.value, newCategory.value, newDate.value); newName.value='';">Add</button>
+</div>

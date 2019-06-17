@@ -1,6 +1,47 @@
-<ul>
-  <li *ngFor="let currentPin of childPinList">{{currentPin.name}}
-    <button (click)="editPin(currentPin)">Edit!</button>
-  </li>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poppins" rel="stylesheet">
+<section class="section-tours">
+  <div class=" text-center  u-margin-bottom-medium">
+    <br> <br>
+    <br> <br>
+  </div>
+  <div class="row">
+    <div class="col-1-of-3" *ngFor="let currentPin of childPinList | sortbydate: filterType">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <div class="card__picture card__picture--1">
+             
+          </div>
+          <h4 class="card__heading">
+            <span class="card__heading-span card__heading-span--1">{{currentPin.category}}</span>
 
-</ul>
+          </h4>
+          <div class="card__details">
+            <ul>
+              <li>{{currentPin.name}}</li>
+              <li>Sleep in cozy hotels</li>
+              <li>Difficulty: easy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <p class="card__price-only">{{currentPin.date | date: 'dd/MM/yyyy' }}</p>
+
+            </div>
+            <a (click)="editPin(currentPin)" href="#0" class="btn btn--white">Edit!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center u-margin-top-big">
+    <a href="#0" class="btn btn--light-blue">
+      <select (change)="onChange($event.target.value)">
+        <option value="AZ" selected="selected">Sort A-Z</option>
+        <option value="ZA" selected="selected">Sort Z-A</option>
+        <option value="bydate"> Sort by date</option>
+      </select>
+    </a>
+  </div>
+</section>

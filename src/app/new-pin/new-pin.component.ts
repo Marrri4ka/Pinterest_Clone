@@ -8,8 +8,8 @@ import { Pin } from '../models/pin.model';
 })
 export class NewPinComponent  {
 @Output() sendPin = new EventEmitter();
-submitForm(name :string){
-let newPin: Pin = new Pin(name);
+submitForm(name :string, category: string, newDate: Date){
+let newPin: Pin = new Pin(name,category,newDate);
 this.sendPin.emit(newPin);
 }
 

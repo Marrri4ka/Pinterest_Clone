@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }  from '@angular/forms';
+import {SortByDatePipe} from './sortbydate.pipe';
 
 import { AppComponent } from './app.component';
 import { PinListComponent } from './pin-list/pin-list.component';
@@ -17,7 +18,9 @@ import { NewPinComponent } from './new-pin/new-pin.component';
     EditPinComponent,
     HeaderComponent,
     FooterComponent,
-    NewPinComponent
+    NewPinComponent,
+    SortByDatePipe
+
   ],
   imports: [
     BrowserModule,

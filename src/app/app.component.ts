@@ -11,8 +11,8 @@ export class AppComponent {
   selectedPin = null;
 
   masterPinList: [Pin] = [
-    new Pin('book'),
-    new Pin('film')
+    new Pin('book','Literatue',new Date()),
+    new Pin('film', 'Oscar',new Date())
   ]
 
   editPin(clickedPin){
