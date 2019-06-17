@@ -9,6 +9,7 @@ import { EditPinComponent } from './edit-pin/edit-pin.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewPinComponent } from './new-pin/new-pin.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NewPinComponent } from './new-pin/new-pin.component';
     HeaderComponent,
     FooterComponent,
     NewPinComponent,
-    SortByDatePipe
+    SortByDatePipe,
+    CategoryListComponent
 
   ],
   imports: [

@@ -1,0 +1,34 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div *ngFor="let category of categories" (click)="goToDetailPage(category)">
+  <h3>{{category.title}}</h3>
+
+</div>
+<div class="container">
+
+
+  <div class='row'>
+    <div class='col-sm-3'>
+      <div class="image">
+        <img class='img-responsive' src='https://image.shutterstock.com/image-vector/vector-mountain-landscape-trees-mountains-260nw-1006713046.jpg' alt=""><br>
+        <div class="bottom-left">Bottom Left</div>
+      </div>
+      <button class="btn btn-danger btn-lg btn-block">See pins</button>
+    </div>
+    <div class='col-sm-3'>
+      <img class='img-responsive' src='https://media.wired.com/photos/5be4cd03db23f3775e466767/master/pass/books-521812297.jpg' alt=""><br>
+      <button class="btn btn-danger btn-lg btn-block">See pins</button>
+    </div>
+    <div class=' col-sm-3'>
+      <img class='img-responsive' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHHVDu5LrVWoJD2Fimj5Ims8mnHaUidii4lkZLuDgEux_yWZLvxA' alt=""><br>
+      <button class="btn btn-danger btn-lg btn-block">See pins</button>
+    </div>
+
+    <div class='col-sm-3'>
+      <img class='img-responsive' src='https://image.freepik.com/free-vector/cute-dogs-illustration_23-2147493711.jpg?2' alt=""><br>
+      <button class="btn btn-danger btn-lg btn-block">See pins</button>
+    </div>
+  </div>
