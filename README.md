@@ -1,5 +1,9 @@
 # PinterestCloneAngular
 
+[ By _**Mariia Stashuk**_](https://www.linkedin.com/in/mariia-stashuk-66754816a/)
+![Alt text](/img/Blank Diagram.jpeg)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
