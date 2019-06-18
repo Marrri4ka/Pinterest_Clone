@@ -6,11 +6,12 @@
 
   <app-new-pin (sendPin)="addPin($event)"></app-new-pin>
 
-  <!-- <app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)"></app-pin-list>
-</div> -->
-  <app-category-list></app-category-list>
+  <app-pin-list [childPinList]="masterPinList" (clickSender)="editPin($event)" (clickSender)="deletePin($event)"></app-pin-list>
+</div>
+<!-- <app-category-list></app-category-list> -->
+<router-outlet></router-outlet>
 
 
 
-  <app-footer>
-  </app-footer>
+<app-footer>
+</app-footer>

@@ -14,6 +14,10 @@ export class PinListComponent  {
   editPin(pinToEdit: Pin){
     this.clickSender.emit(pinToEdit);
   }
+  
+  deletePin(pinToDelete: Pin){
+    this.clickSender.emit(pinToDelete);
+  }
 
   onChange(optionMenu){
     this.filterType = optionMenu;
