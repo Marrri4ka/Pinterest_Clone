@@ -3,60 +3,41 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+<div class="navbar navbar-inverse ">
+  <div class="container">
 
-<body>
+    <div class="navbar-collapse collapse" id="searchbar">
+      <ul class="nav navbar-nav navbar-left">
+        <img src="../../assets/pinterest.png" width="40px">
 
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+      </ul>
+      <!-- <button >Hide form</button> -->
+      <ul class="nav navbar-nav navbar-right">
+        <div (click)="goToAddPinPage()" class="w3-container">
+          <button ng-click="showme=true" class="w3-button w3-xlarge w3-circle w3-red w3-card-6">+</button>
+        </div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li (click)="showFavPins()"> <img src="../../assets/star.svg" width="40px"></li>
+      </ul>
 
-      <div class="navbar-collapse collapse" id="searchbar">
-        <ul class="nav navbar-nav navbar-left">
-          <img src="../../assets/pinterest.png" width="40px">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="about.html">Following</a></li>
+      </ul>
 
-        </ul>
+      <form class="navbar-form">
+        <div class="form-group  col-lg-8">
+          <div class="input-group" style="display:table;">
+            <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
 
-
-
-        <!-- <button >Hide form</button> -->
-
-
-        <ul class="nav navbar-nav navbar-right">
-          <div (click)="goToAddPinPage()" class="w3-container">
-            <button ng-click="showme=true" class="w3-button w3-xlarge w3-circle w3-red w3-card-6">+</button>
-          </div>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="about.html"> <img src="../../assets/star.svg" width="40px"> </a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="about.html">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="about.html">Following</a></li>
-        </ul>
-
-
-
-
-
-
-
-        <form class="navbar-form">
-          <div class="form-group  col-lg-8">
-            <div class="input-group" style="display:table;">
-              <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
-
-              <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-
-            </div>
+            <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
 
           </div>
-
-        </form>
-
-
-      </div>
-      <!--/.nav-collapse -->
+        </div>
+      </form>
     </div>
   </div>
+</div>

@@ -6,8 +6,8 @@
   <button (click)="finishedEditing()">Done</button>
 </div>-->
 
-<button (click)="showAddForm()"><span class="glyphicon glyphicon-pencil"></span></button><br>
-<div *ngIf="isShowAddForm()">
+
+<div>
   <label>New Pin's Name:</label>
   <input [(ngModel)]="selectedPin.name">
   <br>
@@ -23,4 +23,3 @@
 
   <button (click)="beginUpdatingPin(selectedPin)">Update</button>
 </div>
-<button (click)="beginDeletePin(selectedPin)"><span class="glyphicon glyphicon-trash"></span></button>

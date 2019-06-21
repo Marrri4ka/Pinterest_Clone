@@ -17,4 +17,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['addpin']);
   }
 
+  showFavPins() {
+    this.router.navigate(['favoritepins']);
+  }
+
 }

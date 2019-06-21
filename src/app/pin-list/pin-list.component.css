@@ -29,3 +29,7 @@
     max-height: 250px;
     overflow:hidden;
 }
+
+#postsCarousel {
+  margin-bottom: 100px;
+}

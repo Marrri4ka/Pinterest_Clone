@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }  from '@angular/forms';
-import {SortByDatePipe} from './sortbydate.pipe';
+import { FormsModule } from '@angular/forms';
+import { SortByDatePipe } from './sortbydate.pipe';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -10,8 +10,8 @@ import { EditPinComponent } from './edit-pin/edit-pin.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewPinComponent } from './new-pin/new-pin.component';
-import { CategoryListComponent } from './category-list/category-list.component';
-import { CategoryDetailComponent } from './category-detail/category-detail.component';
+// import { CategoryListComponent } from './category-list/category-list.component';
+// import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { HttpModule } from '@angular/http';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
@@ -37,19 +37,19 @@ export const firebaseConfig = {
     FooterComponent,
     NewPinComponent,
     SortByDatePipe,
-    CategoryListComponent,
-    CategoryDetailComponent,
+    // CategoryListComponent,
+    // CategoryDetailComponent,
     EditPinComponent,
     FavoritePinsComponent
 
   ],
   imports: [
     BrowserModule,
-      FormsModule,
-      HttpModule,
-      routing,
-      AngularFireModule.initializeApp(firebaseConfig),
-      AngularFireDatabaseModule
+    FormsModule,
+    HttpModule,
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
