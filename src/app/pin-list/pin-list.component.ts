@@ -14,6 +14,7 @@ import { FavpinsService } from '../favpins.service';
 export class PinListComponent implements OnInit {
   filterType: string = "AZ";
   pins: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
 
   goToEdit(pin: Pin) {
@@ -36,8 +37,8 @@ export class PinListComponent implements OnInit {
   }
 
   addToFav(pin: Pin) {
-    // this.favpinsService.addToFavPins(pin);
-    // this.router.navigate(['favoritepins']);
+    this.favpinsService.addToFavPins(pin);
+
   }
 
 }

@@ -17,6 +17,9 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FavoritePinsComponent } from './favorite-pins/favorite-pins.component';
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
+
 
 
 
@@ -40,7 +43,9 @@ export const firebaseConfig = {
     // CategoryListComponent,
     // CategoryDetailComponent,
     EditPinComponent,
-    FavoritePinsComponent
+    FavoritePinsComponent,
+    PublicComponent,
+    PrivateComponent
 
   ],
   imports: [
