@@ -24,7 +24,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Bootstrap
 * Firebase
 
-###### 2) Set up the project.
+## Set up the project.
 <details>
 <summary>Click Here for Details</summary>
 
@@ -40,6 +40,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <br><br>
     $ npm install
 <br><br>
+4)  Make a free account at Firebase's website:
+<br><br>
+    $ npm install
+<br><br>
+5) Create a new file called api-keys.ts in the src/app directory.Place Firebase credentials (the information Firebase provided in  modal window), like this:
+![Alt text](/img/fb.png)
+
+
 </details>
 
 

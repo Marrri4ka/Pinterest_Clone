@@ -33,6 +33,7 @@ export class PinService {
   }
 
   addPin(newPin: Pin) {
+    newPin.id = "1";
     this.pins.push(newPin);
   }
 

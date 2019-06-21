@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FavpinsService } from '../favpins.service';
 import { Pin } from '../models/pin.model';
 
+
 @Component({
   selector: 'app-favorite-pins',
   templateUrl: './favorite-pins.component.html',
-  styleUrls: ['./favorite-pins.component.css']
+  styleUrls: ['./favorite-pins.component.css'],
+  providers: [FavpinsService]
 })
 export class FavoritePinsComponent implements OnInit {
 
