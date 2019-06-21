@@ -10,18 +10,12 @@ export class AppComponent {
 
   selectedPin = null;
 
-  masterPinList: [Pin] = [
-    new Pin('book','Literatue',new Date()),
-    new Pin('film', 'Oscar',new Date()),
-    new Pin('film', 'Oscar',new Date())
-  ]
-
   editPin(clickedPin){
     this.selectedPin = clickedPin;
   }
 
   deletePin(clickedPin:Pin){
-    var res =[];
+    /* var res =[];
 
         if(this.selectedPin === clickedPin)
         {
@@ -32,9 +26,8 @@ export class AppComponent {
   else {
     this.masterPinList.push(clickedPin);
   }
-  alert(res.length);
 
-  return res;
+  return res;*/
   }
 
   finishedEditing(){
@@ -42,6 +35,6 @@ export class AppComponent {
   }
 
   addPin(newPin: Pin){
-    this.masterPinList.push(newPin);
+    // this.masterPinList.push(newPin);
   }
 }

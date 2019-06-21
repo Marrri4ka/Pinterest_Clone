@@ -13,6 +13,19 @@ import { NewPinComponent } from './new-pin/new-pin.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { HttpModule } from '@angular/http';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FavoritePinsComponent } from './favorite-pins/favorite-pins.component';
+
+
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 
 @NgModule({
@@ -25,14 +38,18 @@ import { HttpModule } from '@angular/http';
     NewPinComponent,
     SortByDatePipe,
     CategoryListComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    EditPinComponent,
+    FavoritePinsComponent
 
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    routing,
-    HttpModule
+      FormsModule,
+      HttpModule,
+      routing,
+      AngularFireModule.initializeApp(firebaseConfig),
+      AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,26 @@
-<div *ngIf="childSelectedPin">
+<!--<div *ngIf="childSelectedPin">
   <h3>{{childSelectedPin.name}}</h3>
   <h4>Edit Pin</h4>
   <label> Enter Pin's name</label>
   <input [(ngModel)]="childSelectedPin.name">
   <button (click)="finishedEditing()">Done</button>
+</div>-->
+
+<button (click)="showAddForm()"><span class="glyphicon glyphicon-pencil"></span></button><br>
+<div *ngIf="isShowAddForm()">
+  <label>New Pin's Name:</label>
+  <input [(ngModel)]="selectedPin.name">
+  <br>
+
+  <label>New Pin's Category:</label>
+  <input [(ngModel)]="selectedPin.category">
+  <br>
+
+  <label>New Pin's Date:</label>
+  <input [(ngModel)]="selectedPin.date">
+  <br>
+  <br>
+
+  <button (click)="beginUpdatingPin(selectedPin)">Update</button>
 </div>
+<button (click)="beginDeletePin(selectedPin)"><span class="glyphicon glyphicon-trash"></span></button>
