@@ -5,6 +5,8 @@ import { NewPinComponent } from './new-pin/new-pin.component';
 import { PinListComponent } from './pin-list/pin-list.component';
 import { FavoritePinsComponent } from './favorite-pins/favorite-pins.component';
 import { EditPinComponent } from './edit-pin/edit-pin.component';
+import { PublicComponent } from './public/public.component';
+import { PrivateComponent } from './private/private.component';
 
 const appRoutes: Routes = [
   // {
@@ -30,6 +32,16 @@ const appRoutes: Routes = [
   {
     path: 'editpin/:id',
     component: EditPinComponent
+  },
+
+  {
+    path: 'public',
+    component: PublicComponent
+  },
+
+  {
+    path: 'private',
+    component: PrivateComponent
   }
 
 ];

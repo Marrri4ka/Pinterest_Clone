@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FavpinsService } from '../favpins.service';
 import { Pin } from '../models/pin.model';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -10,14 +11,14 @@ import { Pin } from '../models/pin.model';
   providers: [FavpinsService]
 })
 export class FavoritePinsComponent implements OnInit {
+  pins: FirebaseListObservable<any[]>;
 
-  pins: Pin[] = [
 
-  ];
 
   constructor(private favpinsService: FavpinsService) { }
 
   ngOnInit() {
+    this.pins = this.favpinsService.getPins();
   }
 
 }
