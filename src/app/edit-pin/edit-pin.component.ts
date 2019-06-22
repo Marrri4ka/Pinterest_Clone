@@ -36,8 +36,7 @@ export class EditPinComponent implements OnInit {
     this.pinService.getPinById(this.pinId).subscribe(dataLastEmittedFromObserver => {
       this.selectedPin = new Pin(dataLastEmittedFromObserver.name,
         dataLastEmittedFromObserver.category,
-        dataLastEmittedFromObserver.date,
-        this.pinId);
+        dataLastEmittedFromObserver.date);
     });
 
   }
@@ -45,7 +44,7 @@ export class EditPinComponent implements OnInit {
 
 
   beginUpdatingPin(pinToUpdate) {
-    this.pinService.updatePin(pinToUpdate);
+    this.pinService.updatePin(pinToUpdate, this.pinId);
     this.router.navigate(['']);
   }
 

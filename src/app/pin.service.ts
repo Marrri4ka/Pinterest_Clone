@@ -18,8 +18,8 @@ export class PinService {
     return this.database.object('pins/' + pinId);
   }
 
-  updatePin(localUpdatedPin) {
-    var pinEntryInFirebase = this.getPinById(localUpdatedPin.id);
+  updatePin(localUpdatedPin, key) {
+    var pinEntryInFirebase = this.getPinById(key);
     pinEntryInFirebase.update({
       name: localUpdatedPin.name,
       category: localUpdatedPin.category,
@@ -33,7 +33,7 @@ export class PinService {
   }
 
   addPin(newPin: Pin) {
-    newPin.id = "1";
+
     this.pins.push(newPin);
   }
 

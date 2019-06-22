@@ -17,8 +17,8 @@ export class PinListComponent implements OnInit {
   currentRoute: string = this.router.url;
 
 
-  goToEdit(pin: Pin) {
-    this.router.navigate(['editpin', pin.id]);
+  goToEdit(pin) {
+    this.router.navigate(['editpin', pin.$key]);
   }
 
   beginDeletePin(pin: Pin) {

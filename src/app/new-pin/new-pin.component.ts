@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class NewPinComponent implements OnInit {
 
 
-  submitForm(name: string, category: string, date: Date, id: string) {
-    var newPin: Pin = new Pin(name, category, date, id);
+  submitForm(name: string, category: string, date: Date) {
+    var newPin: Pin = new Pin(name, category, date);
     this.pinService.addPin(newPin);
     this.router.navigate(['']);
   }
