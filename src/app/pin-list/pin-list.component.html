@@ -1,6 +1,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <section class="container p-t-3">
@@ -30,7 +31,7 @@
             <h6 class="small text-wide p-b-2"> Category: {{pin.category }}</h6>
 
             <h2 (click)="goToDetailPinPage(pin)">
-              <a href> Name:{{pin.name}}</a>
+              <a> Name:{{pin.name}}</a>
             </h2>
             <button (click)="goToEdit(pin)"><span class="glyphicon glyphicon-pencil"></span></button><br>
             <button (click)="beginDeletePin(pin)"><span class="glyphicon glyphicon-trash"></span></button>

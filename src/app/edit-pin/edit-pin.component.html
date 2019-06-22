@@ -7,7 +7,7 @@
 </div>-->
 
 
-<div>
+<!-- <div>
   <label>New Pin's Name:</label>
   <input [(ngModel)]="selectedPin.name">
   <br>
@@ -25,4 +25,41 @@
   <br>
 
   <button (click)="beginUpdatingPin(selectedPin)">Update</button>
-</div>
+</div> -->
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<label>
+  <p class="label-txt">New Pin's Name:</p>
+  <input [(ngModel)]="selectedPin.name" type="text" class="input">
+  <div class="line-box">
+    <div class="line"></div>
+  </div>
+</label>
+<label>
+  <p class="label-txt">New Pin's Link:</p>
+  <input [(ngModel)]="selectedPin.link" type="text" class="input">
+  <div class="line-box">
+    <div class="line"></div>
+  </div>
+</label>
+<label>
+  <p class="label-txt">New Pin's Date:</p>
+  <input [(ngModel)]="selectedPin.date" type="text" class="input">
+  <div class="line-box">
+    <div class="line"></div>
+  </div>
+</label>
+<label>
+  <p class="label-txt">New Pin's Category:</p>
+  <input [(ngModel)]="selectedPin.category" type="text" class="input">
+  <div class="line-box">
+    <div class="line"></div>
+  </div>
+</label>
+<button (click)="beginUpdatingPin(selectedPin)" type="submit">submit</button>
