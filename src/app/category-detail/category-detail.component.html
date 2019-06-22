@@ -3,6 +3,6 @@
 </p>
 
 Here're pins for this category:
-<ul *ngFor="let pin of pinsToDisplay">
+<ul *ngFor="let pin of pinsToDisplay | async">
   <li> Title: {{pin.name}} <br> Added: {{pin.date | date: 'dd/MM/yyyy'}}<br> Category: {{pin.category}}<br><button (click)="delete(pin)">Delete</button></li>
 </ul>

@@ -3,10 +3,17 @@
     <h1>New Pin</h1>
     <label>Create new Pin</label>
     <input #newName>
-    <label>Category</label>
-    <input #newCategory>
+    <label>Link</label>
+    <input #newLink>
     <label>Date</label>
     <input type="date" #newDate>
-    <button ng-click="showme=false" (click)="submitForm(newName.value, newCategory.value, newDate.value); newName.value='';">Add</button>
+    <select #newCategory>
+      <option value='book'>Book</option>
+      <option value='music'>Music</option>
+      <option value='sport'>Sport</option>
+      <option value='health'>Health</option>
+
+    </select>
+    <button ng-click="showme=false" (click)="submitForm(newName.value, newLink.value, newDate.value,newCategory.value); newName.value='';">Add</button>
   </div>
 </div>

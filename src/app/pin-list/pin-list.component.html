@@ -25,11 +25,12 @@
             <img class="img-fluid" src="http://i.imgur.com/EW5FgJM.png" alt="Carousel 1">
           </div>
           <div class="card-block p-t-2">
-            <h6 class="small text-wide p-b-2"> {{pin.category}}</h6>
-            <h6 class="small text-wide p-b-2">{{pin.date | date: 'dd/MM/yyyy' }}</h6>
+            <h6 class="small text-wide p-b-2">Link: {{pin.link}}</h6>
+            <h6 class="small text-wide p-b-2"> Date:{{pin.date | date: 'dd/MM/yyyy' }}</h6>
+            <h6 class="small text-wide p-b-2"> Category: {{pin.category }}</h6>
 
-            <h2>
-              <a href>{{pin.name}}</a>
+            <h2 (click)="goToDetailPinPage(pin)">
+              <a href> Name:{{pin.name}}</a>
             </h2>
             <button (click)="goToEdit(pin)"><span class="glyphicon glyphicon-pencil"></span></button><br>
             <button (click)="beginDeletePin(pin)"><span class="glyphicon glyphicon-trash"></span></button>

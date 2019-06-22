@@ -16,7 +16,10 @@ export class PinListComponent implements OnInit {
   pins: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
+  goToDetailPinPage(clickedPin) {
+    this.router.navigate(['pindetail', clickedPin.$key]);
 
+  }
   goToEdit(pin) {
     this.router.navigate(['editpin', pin.$key]);
   }

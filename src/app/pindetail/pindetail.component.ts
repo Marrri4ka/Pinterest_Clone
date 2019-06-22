@@ -1,31 +1,27 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Pin } from '../models/pin.model';
-import { PinService } from '../pin.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+import { PinService } from '../pin.service';
+import { Router } from '@angular/router';
+import { Pin } from '../models/pin.model';
+
 
 @Component({
-  selector: 'app-edit-pin',
-  templateUrl: './edit-pin.component.html',
-  styleUrls: ['./edit-pin.component.css'],
+  selector: 'app-pindetail',
+  templateUrl: './pindetail.component.html',
+  styleUrls: ['./pindetail.component.css'],
   providers: [PinService]
-
 })
-export class EditPinComponent implements OnInit {
+export class PindetailComponent implements OnInit {
 
   pinId: string;
   selectedPin: Pin;
+
   constructor(private pinService: PinService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
-  ) { }
-
-  showAddForm() {
-  }
-
-
+    private location: Location) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -41,18 +37,5 @@ export class EditPinComponent implements OnInit {
 
       );
     });
-
   }
-
-
-
-  beginUpdatingPin(pinToUpdate) {
-    this.pinService.updatePin(pinToUpdate, this.pinId);
-    this.router.navigate(['']);
-  }
-
-  beginDeletePin(pinToDelete) {
-    // this.pinService.deletePin(pinToDelete);
-  }
-
 }

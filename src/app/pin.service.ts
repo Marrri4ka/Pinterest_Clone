@@ -22,8 +22,10 @@ export class PinService {
     var pinEntryInFirebase = this.getPinById(key);
     pinEntryInFirebase.update({
       name: localUpdatedPin.name,
+      link: localUpdatedPin.link,
+      date: localUpdatedPin.date,
       category: localUpdatedPin.category,
-      date: localUpdatedPin.date
+
     });
   }
 
