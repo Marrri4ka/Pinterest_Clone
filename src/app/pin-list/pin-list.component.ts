@@ -12,7 +12,7 @@ import { FavpinsService } from '../favpins.service';
   providers: [PinService, FavpinsService]
 })
 export class PinListComponent implements OnInit {
-  filterType: string = "AZ";
+  myvalue: string = "AZ";
   pins: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
@@ -29,7 +29,7 @@ export class PinListComponent implements OnInit {
   }
 
   onChange(optionMenu) {
-    this.filterType = optionMenu;
+    this.myvalue = optionMenu;
   }
 
   constructor(private pinService: PinService, private router: Router,

@@ -22,10 +22,6 @@ import { PrivateComponent } from './private/private.component';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { PindetailComponent } from './pindetail/pindetail.component';
 
-
-
-
-
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -33,7 +29,6 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket,
   messagingSenderId: masterFirebaseConfig.messagingSenderId
 };
-
 
 @NgModule({
   declarations: [
@@ -51,8 +46,6 @@ export const firebaseConfig = {
     PublicComponent,
     PrivateComponent,
     PindetailComponent,
-
-
   ],
   imports: [
     BrowserModule,

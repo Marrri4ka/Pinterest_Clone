@@ -20,7 +20,7 @@
   </div>
   <div class="container p-t-0 m-t-2 carousel-inner">
     <div class="row row-equal carousel-item active m-t-0">
-      <div *ngFor="let pin of pins | async" class="col-md-4">
+      <div *ngFor="let pin of pins | async | sortbydate:myvalue" class="col-md-4">
         <div class="card">
           <div class="card-img-top card-img-top-250">
             <img class="img-fluid" src="http://i.imgur.com/EW5FgJM.png" alt="Carousel 1">
@@ -38,9 +38,15 @@
             <button (click)="addToFav(pin)"><span class="glyphicon glyphicon-star"></span></button>
 
           </div>
+
         </div>
+
       </div>
     </div>
+    <select [(ngModel)]="myvalue">
+      <option value="AZ">A-Z</option>
+      <option value="ZA">Z-A</option>
+    </select>
   </div>
 </section>
 <!-- \<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poppins" rel="stylesheet">

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../authentication.service';
 
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  providers: [AuthenticationService]
 
 })
 
@@ -15,7 +17,22 @@ import { Router } from '@angular/router';
 
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  user;
+  private isLoggedIn: Boolean;
+  private userName: String;
+
+  constructor(public authService: AuthenticationService, private router: Router) {
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        this.isLoggedIn = false;
+        // this.router.navigate(['public']);
+      } else {
+        this.isLoggedIn = true;
+        this.userName = user.displayName;
+        // this.router.navigate([]);
+      }
+    });
+  }
 
   ngOnInit() {
   }
@@ -26,6 +43,15 @@ export class HeaderComponent implements OnInit {
 
   showFavPins() {
     this.router.navigate(['favoritepins']);
+  }
+
+  login() {
+    this.authService.login();
+  }
+
+  logout() {
+    this.authService.logout();
+
   }
 
 }

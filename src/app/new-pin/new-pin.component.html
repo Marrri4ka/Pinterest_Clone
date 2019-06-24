@@ -1,12 +1,33 @@
-<div class="container">
-  <div ng-show="showme">
-    <h1>New Pin</h1>
-    <label>Create new Pin</label>
-    <input #newName>
-    <label>Link</label>
-    <input #newLink>
-    <label>Date</label>
-    <input type="date" #newDate>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div ng-show="showme" class="form">
+
+
+  <label>
+    <p class="label-txt">New Pin's Name:</p>
+    <input #newName type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">New Pin's Link:</p>
+    <input #newLink type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">New Pin's Date:</p>
+    <input #newDate type="date" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">New Pin's Category:</p>
     <select #newCategory>
       <option value='book'>Book</option>
       <option value='music'>Music</option>
@@ -14,6 +35,10 @@
       <option value='health'>Health</option>
 
     </select>
-    <button ng-click="showme=false" (click)="submitForm(newName.value, newLink.value, newDate.value,newCategory.value); newName.value='';">Add</button>
-  </div>
+    <input [(ngModel)]="selectedPin.category" type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <button ng-click="showme=false" (click)="submitForm(newName.value, newLink.value, newDate.value,newCategory.value); newName.value='';">submit</button>
 </div>
