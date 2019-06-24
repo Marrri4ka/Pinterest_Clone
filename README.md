@@ -4,8 +4,8 @@
 
 [ By _**Mariia Stashuk**_](https://www.linkedin.com/in/mariia-stashuk-66754816a/)
 
-![Alt text](/img/bd1.jpeg)
-
+<!-- ![Alt text](/img/bd1.jpeg) -->
+https://pinterest-f3f23.firebaseapp.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
@@ -24,35 +24,39 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Bootstrap
 * Firebase
 
-## Set up the project.
+
+
+##  Set up the project
+
+Clone project directory:
+### `https://github.com/Marrri4ka/Pinterest_Clone.git`
+In the project directory, you can run:
+### `npm install`
+### `npm start`
+
+
+Runs the app in the development mode.<br>
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+
+
+
+## Important
 <details>
 <summary>Click Here for Details</summary>
 
-1) Clone this repository:
-<br><br>
-    $ git clone
-<br><br>
-2) Navigate to repository:
-<br><br>
-    $ cd Pinterest_Clone
-<br><br>
-3) Install:
-<br><br>
-    $ npm install
-<br><br>
-4)  Make a free account at Firebase's website:
-<br><br>
-    $ npm install
-<br><br>
-5) Create a new file called api-keys.ts in the src/app directory.Place Firebase credentials (the information Firebase provided in  modal window), like this:
+ Create a new file called api-keys.ts in the src/app directory.Place Firebase credentials (the information Firebase provided in  modal window), like this:
 ![Alt text](/img/fb.png)
-
-
 </details>
 
 
 
 ## Development server
+<details>
+<summary>Click Here for Details</summary>
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -75,7 +79,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+</details>
 
 <!-- ## Team
 
