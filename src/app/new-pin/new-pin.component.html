@@ -27,6 +27,7 @@
     </div>
   </label>
 
+
   <label>
     <p class="label-txt">New Pin's Category:</p>
     <select #newCategory>
@@ -36,10 +37,14 @@
       <option value='health'>Health</option>
 
     </select>
-    <input [(ngModel)]="selectedPin.category" type="text" class="input">
+
     <div class="line-box">
       <div class="line"></div>
     </div>
   </label>
+  <div class="image-upload">
+    <img [src]="imageSrc" style="max-width:300px;max-height:300px" />
+    <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+  </div>
   <button ng-click="showme=false" (click)="submitForm(newName.value, newLink.value, newDate.value,newCategory.value); newName.value='';">submit</button>
 </div>

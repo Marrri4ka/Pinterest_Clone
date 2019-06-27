@@ -18,8 +18,8 @@ import { AuthenticationService } from '../authentication.service';
 export class HeaderComponent implements OnInit {
 
   user;
-  private isLoggedIn: Boolean;
-  private userName: String;
+  public isLoggedIn: Boolean;
+  public userName: String;
 
   constructor(public authService: AuthenticationService, private router: Router) {
     this.authService.user.subscribe(user => {

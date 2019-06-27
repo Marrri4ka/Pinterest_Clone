@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class NewPinComponent implements OnInit {
 
 
-  submitForm(name: string, link: string, date: Date, category: string) {
-    var newPin: Pin = new Pin(name, link, date, category);
+  submitForm(name: string, link: string, date: Date, category: string, imageSrc: string) {
+    var newPin: Pin = new Pin(name, link, date, category, this.imageSrc);
     this.pinService.addPin(newPin);
     this.router.navigate(['']);
   }
@@ -23,6 +23,25 @@ export class NewPinComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  private imageSrc: string = '';
+
+  handleInputChange(e) {
+    var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    var pattern = /image-*/;
+    var reader = new FileReader();
+    if (!file.type.match(pattern)) {
+      alert('invalid format');
+      return;
+    }
+    reader.onload = this._handleReaderLoaded.bind(this);
+    reader.readAsDataURL(file);
+  }
+  _handleReaderLoaded(e) {
+    let reader = e.target;
+    this.imageSrc = reader.result;
+    console.log(this.imageSrc)
   }
 
 }

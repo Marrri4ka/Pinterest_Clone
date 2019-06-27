@@ -23,10 +23,10 @@
       <div *ngFor="let pin of pins | async | sortbydate:myvalue" class="col-md-4">
         <div class="card">
           <div class="card-img-top card-img-top-250">
-            <img *ngIf="pin.category === 'book'" class="img-fluid" src="https://media.wired.com/photos/5be4cd03db23f3775e466767/master/pass/books-521812297.jpg" alt="Carousel 1">
-            <img *ngIf="pin.category === 'sport'" class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGkrLB5m2wPBAYXk3s6PH9zHJwIFkb6wVZWNPLfF3mCHl_AORi" alt=" Carousel 1">
-            <img *ngIf="pin.category === 'music'" class="img-fluid" src="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7k6XYEmCpUn1ACw1P2WQhctLUC0Vpva6SXS4GfLnVnRecd1jC_g" alt=" Carousel 1">
-            <img *ngIf="pin.category === 'health'" class="img-fluid" src="   https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUj_Te1ZKJ74rTl5dNerWfk496MsgFjiSmgYhARWhQF80y6u9KFA" alt=" Carousel 1">
+            <img *ngIf="pin.category === 'book'" class="img-fluid" src="{{pin.imageSrc}}" alt="Carousel 1">
+            <img *ngIf="pin.category === 'sport'" class="img-fluid" src="{{pin.imageSrc}}" alt=" Carousel 1">
+            <img *ngIf="pin.category === 'music'" class="img-fluid" src=" {{pin.imageSrc}}" alt=" Carousel 1">
+            <img *ngIf="pin.category === 'health'" class="img-fluid" src=" {{pin.imageSrc}}" alt=" Carousel 1">
 
 
           </div>
