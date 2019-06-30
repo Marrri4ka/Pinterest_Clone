@@ -3,6 +3,7 @@ export class Pin {
     public link: string,
     public date: Date,
     public category: string,
-    public imageSrc: string
+    public imageSrc: string,
+    public userName: string
   ) { }
 }

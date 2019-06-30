@@ -11,8 +11,14 @@ export class FavpinsService {
   }
 
 
-  getPins() {
-    return this.pins;
+  getPins(userName: string) {
+
+    return this.database.list('favoritepins', {
+      query: {
+        orderByChild: 'userName',
+        equalTo: userName
+      }
+    });
   }
 
   addToFavPins(pin: Pin) {

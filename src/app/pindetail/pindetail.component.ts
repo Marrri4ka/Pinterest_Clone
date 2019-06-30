@@ -34,7 +34,8 @@ export class PindetailComponent implements OnInit {
         dataLastEmittedFromObserver.link,
         dataLastEmittedFromObserver.date,
         dataLastEmittedFromObserver.category,
-        dataLastEmittedFromObserver.imageSrc
+        dataLastEmittedFromObserver.imageSrc,
+        dataLastEmittedFromObserver.userName
 
       );
     });

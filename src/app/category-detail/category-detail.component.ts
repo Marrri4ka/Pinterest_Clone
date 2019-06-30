@@ -15,7 +15,7 @@ import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/d
 export class CategoryDetailComponent implements OnInit {
 
   categoryId: number;
-  categoryToDisplay: FirebaseObjectObservable<any[]>;
+  categoryToDisplay;
   pinsToDisplay: FirebaseListObservable<any[]>;
 
   constructor(private route: ActivatedRoute,
@@ -27,9 +27,10 @@ export class CategoryDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.categoryId = parseInt(urlParameters['id']);
     });
-    this.categoryToDisplay = this.categoryService.getCategoryById(this.categoryId);
-
-    this.pinsToDisplay = this.categoryService.getPinsByCategoryName(this.categoryToDisplay.title);
+    this.categoryService.getCategoryById(this.categoryId).subscribe(category => {
+      this.categoryToDisplay = category;
+      this.pinsToDisplay = this.categoryService.getPinsByCategoryName(this.categoryToDisplay.title);
+    });
   }
 
 }

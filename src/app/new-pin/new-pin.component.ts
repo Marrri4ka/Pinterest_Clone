@@ -17,7 +17,7 @@ export class NewPinComponent implements OnInit {
 
 
   submitForm(name: string, link: string, date: Date, category: string, imageSrc: string) {
-    var newPin: Pin = new Pin(name, link, date, category, this.imageSrc);
+    var newPin: Pin = new Pin(name, link, date, category, this.imageSrc, "");
     this.pinService.addPin(newPin);
     this.router.navigate(['']);
   }

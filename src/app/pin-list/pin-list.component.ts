@@ -4,12 +4,13 @@ import { PinService } from '../pin.service';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { FavpinsService } from '../favpins.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-pin-list',
   templateUrl: './pin-list.component.html',
   styleUrls: ['./pin-list.component.css'],
-  providers: [PinService, FavpinsService]
+  providers: [PinService, FavpinsService, AuthenticationService]
 })
 export class PinListComponent implements OnInit {
   myvalue: string = "AZ";
@@ -33,15 +34,26 @@ export class PinListComponent implements OnInit {
   }
 
   constructor(private pinService: PinService, private router: Router,
-    private favpinsService: FavpinsService) { }
+    private favpinsService: FavpinsService, private authService: AuthenticationService) { }
 
   ngOnInit() {
     this.pins = this.pinService.getPins();
   }
 
   addToFav(pin: Pin) {
-    this.favpinsService.addToFavPins(pin);
+    this.authService.user.subscribe(user => {
+      if (user == null) {
+        alert("Please log in to see your pins!");
 
+      } else {
+
+        pin.userName = user.displayName;
+        this.favpinsService.addToFavPins(pin);
+
+
+      }
+    });
   }
+
 
 }
