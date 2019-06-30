@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Category } from '../models/category.model';
 import { Pin } from '../models/pin.model';
 import { CategoryService } from '../category.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-category-detail',
@@ -15,7 +15,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class CategoryDetailComponent implements OnInit {
 
   categoryId: number;
-  categoryToDisplay: Category;
+  categoryToDisplay: FirebaseObjectObservable<any[]>;
   pinsToDisplay: FirebaseListObservable<any[]>;
 
   constructor(private route: ActivatedRoute,
@@ -28,6 +28,7 @@ export class CategoryDetailComponent implements OnInit {
       this.categoryId = parseInt(urlParameters['id']);
     });
     this.categoryToDisplay = this.categoryService.getCategoryById(this.categoryId);
+
     this.pinsToDisplay = this.categoryService.getPinsByCategoryName(this.categoryToDisplay.title);
   }
 

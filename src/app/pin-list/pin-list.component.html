@@ -23,10 +23,8 @@
       <div *ngFor="let pin of pins | async | sortbydate:myvalue" class="col-md-4">
         <div class="card">
           <div class="card-img-top card-img-top-250">
-            <img *ngIf="pin.category === 'book'" class="img-fluid" src="{{pin.imageSrc}}" alt="Carousel 1">
-            <img *ngIf="pin.category === 'sport'" class="img-fluid" src="{{pin.imageSrc}}" alt=" Carousel 1">
-            <img *ngIf="pin.category === 'music'" class="img-fluid" src=" {{pin.imageSrc}}" alt=" Carousel 1">
-            <img *ngIf="pin.category === 'health'" class="img-fluid" src=" {{pin.imageSrc}}" alt=" Carousel 1">
+            <img class="img-fluid" src="{{pin.imageSrc}}" alt="Carousel 1">
+
 
 
           </div>

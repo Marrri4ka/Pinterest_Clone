@@ -2,15 +2,18 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Pin } from '../models/pin.model';
 import { PinService } from '../pin.service';
 import { Router } from '@angular/router';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-new-pin',
   templateUrl: './new-pin.component.html',
   styleUrls: ['./new-pin.component.css'],
-  providers: [PinService]
+  providers: [PinService, CategoryService]
 
 })
 export class NewPinComponent implements OnInit {
+  categories: FirebaseListObservable<any[]>;
 
 
   submitForm(name: string, link: string, date: Date, category: string, imageSrc: string) {
@@ -19,10 +22,10 @@ export class NewPinComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  constructor(private pinService: PinService, private router: Router) { }
+  constructor(private pinService: PinService, private router: Router, private categoryService: CategoryService) { }
 
   ngOnInit() {
-
+    this.categories = this.categoryService.getCategories();
   }
 
   private imageSrc: string = '';

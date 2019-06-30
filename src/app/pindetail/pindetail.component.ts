@@ -33,7 +33,8 @@ export class PindetailComponent implements OnInit {
       this.selectedPin = new Pin(dataLastEmittedFromObserver.name,
         dataLastEmittedFromObserver.link,
         dataLastEmittedFromObserver.date,
-        dataLastEmittedFromObserver.category
+        dataLastEmittedFromObserver.category,
+        dataLastEmittedFromObserver.imageSrc
 
       );
     });

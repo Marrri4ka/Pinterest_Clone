@@ -1,35 +1,67 @@
-<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<div *ngFor="let category of categories" (click)="goToDetailPage(category)">
-  <h3>{{category.title}}</h3>
+<div class="container bg">
 
-</div>
-<!-- <div class="container">
+  <div class="row">
+    <div *ngFor="let category of categories | async" (click)="goToDetailPage(category)" class="col-xs-12 col-sm-6 col-md-3 rwrapper">
+      <div class="rlisting">
+        <div class="col-md-12 nopad">
+          <img src={{category.imageSrc}}>
+        </div>
+        <div class="col-md-12 nopad">
 
-
-  <div class='row'>
-    <div class='col-sm-3'>
-      <div class="image">
-        <img class='img-responsive' src='https://image.shutterstock.com/image-vector/vector-mountain-landscape-trees-mountains-260nw-1006713046.jpg' alt=""><br>
-        <div class="bottom-left">Bottom Left</div>
+          <div class="rfooter">
+            <i class="fa fa-phone-square"></i>
+            <h3 (click)="goToDetailPage(category)">{{category.title}}</h3>
+          </div>
+        </div>
       </div>
-      <button class="btn btn-danger btn-lg btn-block">See pins</button>
-    </div>
-    <div class='col-sm-3'>
-      <img class='img-responsive' src='https://media.wired.com/photos/5be4cd03db23f3775e466767/master/pass/books-521812297.jpg' alt=""><br>
-      <button class="btn btn-danger btn-lg btn-block">See pins</button>
-    </div>
-    <div class=' col-sm-3'>
-      <img class='img-responsive' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHHVDu5LrVWoJD2Fimj5Ims8mnHaUidii4lkZLuDgEux_yWZLvxA' alt=""><br>
-      <button class="btn btn-danger btn-lg btn-block">See pins</button>
     </div>
 
-    <div class='col-sm-3'>
-      <img class='img-responsive' src='https://image.freepik.com/free-vector/cute-dogs-illustration_23-2147493711.jpg?2' alt=""><br>
-      <button class="btn btn-danger btn-lg btn-block">See pins</button>
+    <div class="col-xs-12 col-sm-6 col-md-3 rwrapper">
+      <div class="rlisting">
+        <div class="col-md-12 nopad">
+          <img src="http://dummyimage.com/250x250" class="img-responsive">
+        </div>
+        <div class="col-md-12 nopad">
+          <h5>Lorem I</h5>
+          <p>Lorem Ipsum is simply dummy text o industry...</p>
+          <div class="rfooter">
+            <i class="fa fa-phone-square"></i> +3000000
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 rwrapper">
+      <div class="rlisting">
+        <div class="col-md-12 nopad">
+          <img src="http://dummyimage.com/250x250" class="img-responsive">
+        </div>
+        <div class="col-md-12 nopad">
+          <h5>Simply g</h5>
+          <p>Lorem Ipsum is simply dummy text o industry...</p>
+          <div class="rfooter">
+            <i class="fa fa-phone-square"></i> +3000000
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 rwrapper">
+      <div class="rlisting">
+        <div class="col-md-12 nopad">
+          <img src="http://dummyimage.com/250x250" class="img-responsive">
+        </div>
+        <div class="col-md-12 nopad">
+          <h5>Dummy S</h5>
+          <p>Lorem Ipsum is simply dummy text o industry...</p>
+          <div class="rfooter">
+            <i class="fa fa-phone-square"></i> +3000000
+          </div>
+        </div>
+      </div>
     </div>
   </div>
--->
+</div>

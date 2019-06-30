@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from '../models/category.model';
 import { Router } from '@angular/router';
 import { CategoryService } from '../category.service';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-category-list',
@@ -10,11 +11,13 @@ import { CategoryService } from '../category.service';
   providers: [CategoryService]
 })
 export class CategoryListComponent implements OnInit {
-  goToDetailPage(clickedCategory: Category) {
-    this.router.navigate(['category', clickedCategory.id]);
+  goToDetailPage(clickedCategory) {
+    this.router.navigate(['category', clickedCategory.$key]);
   };
 
-  categories: Category[];
+  categories: FirebaseListObservable<any[]>;
+
+
 
   constructor(private router: Router, private categoryService: CategoryService) { }
 

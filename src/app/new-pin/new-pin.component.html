@@ -31,10 +31,7 @@
   <label>
     <p class="label-txt">New Pin's Category:</p>
     <select #newCategory>
-      <option value='book'>Book</option>
-      <option value='music'>Music</option>
-      <option value='sport'>Sport</option>
-      <option value='health'>Health</option>
+      <option *ngFor="let category of categories |async" value='{{category.title}}'>{{category.title}}</option>
 
     </select>
 
